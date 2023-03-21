@@ -1,3 +1,4 @@
+import { TesteService } from './teste.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  nomes: String[]
+
+  constructor(private testeService: TesteService){
+    this.nomes = testeService.getNomes();
+
+  }
+
 }
+
+
 
